@@ -1,6 +1,3 @@
 #!/usr/bin/env ruby
-#require_relative "./surfing/version"
-#require_relative "./surfing/cli"
-#require_relative "./surfing/surf"
 require_relative '../lib/surfing'
 Surfing::CLI.new.call
