@@ -1,5 +1,5 @@
-class Skiing::Ski 
-  #attr_accessor :name , :url 
+class Surfing::Surf 
+  attr_accessor :name , :url 
   def self.areas
     puts "I have no idea what Im doing dhoo!! "
   # ski_area1 = Ski.new 

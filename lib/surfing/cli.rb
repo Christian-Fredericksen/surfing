@@ -1,11 +1,10 @@
-class Skiing::CLI 
+class Surfing::CLI 
   
   def call 
     menu 
-    list_ski
-    farewell 
   end
-  def list_ski
+  
+  def list_surf
     # puts "This is a list of the skies areas in Colorado:"
     # puts "
     #   Arapahoe Basin
@@ -18,12 +17,12 @@ class Skiing::CLI
     #   Copper Mountain
     #   Cranor Ski Area
     #   Crested Butte "
-      @skiies = Skiing::Ski.areas
+      @beadhes = Surfing::Surf.areas
   end 
    def menu 
      input = nil 
      while input != "exit"
-     puts "Please select the ski area you want info about it."
+     puts "Welcome to California Surf Spots, to see the list of surf spots please type 'list', or type 'exit' to exit the program."
      input = gets.strip.downcase 
      case input 
      when"1"
@@ -31,14 +30,16 @@ class Skiing::CLI
      when "2"
      puts "more info about ..."
      when "list"
-       list_ski 
+       list_surf
+     when "exit"
+       farewell
      else 
-       puts "Invalid input !"
+       puts "Invalid input!"
      end 
    end
    end 
    def farewell 
-     puts "Have a great time in Colorado !!"
+     puts "Have a great time in California!!"
    end 
 end 
 
