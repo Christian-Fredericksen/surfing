@@ -5,20 +5,20 @@ class Surfing::CLI
   end
   
   def list_surf
-    # puts "This is a list of the skies areas in Colorado:"
+    # puts "This is a list of the surf spots in California:"
     # puts "
-    #   Arapahoe Basin
-    #   Aspen Highlands (Aspen)
-    #   Aspen Mountain (Aspen) 
-    #   Beaver Creek
-    #   Breckenridge
-    #   Buttermilk (Aspen)
-    #   Chapman Hill Ski Area
-    #   Copper Mountain
-    #   Cranor Ski Area
-    #   Crested Butte "
-      @beadhes = Surfing::Surf.areas
-  end 
+    #   Windansea Beach, La Jolla
+    #   Swami’s, Encinitas
+    #   Trestles (San Onofre State Beach), San Clemente 
+    #   The Wedge, Newport Beach
+    #   Huntington Beach Pier, Huntington Beach
+    #   Surfrider Beach, Malibu
+    #   Rincon Point, Carpinteria
+    #   Pismo Beach Pier, Pismo Beach
+    #   Asilomar State Beach, Pacific Grove
+    #   Mavericks, Half Moon Bay "
+      @beaches = Surfing::Surf.areas
+  end
    def menu 
      input = nil 
      while input != "exit"
