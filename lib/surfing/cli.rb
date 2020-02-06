@@ -16,13 +16,13 @@ class Surfing::CLI
     #   Rincon Point, Carpinteria
     #   Pismo Beach Pier, Pismo Beach
     #   Asilomar State Beach, Pacific Grove
-    #   Mavericks, Half Moon Bay "
-      @beaches = Surfing::Surf.areas
+    #   Mavericks, Half Moon Bay"
+      @beaches = Surf.areas
   end
-   def menu 
+   def menu
+     puts "Welcome to California Surf Spots, to see the list of surf spots please type 'list', or type 'exit' to exit the program."
      input = nil 
      while input != "exit"
-     puts "Welcome to California Surf Spots, to see the list of surf spots please type 'list', or type 'exit' to exit the program."
      input = gets.strip.downcase 
      case input 
      when"1"
@@ -31,6 +31,7 @@ class Surfing::CLI
      puts "more info about ..."
      when "list"
        list_surf
+       puts "\nWhich surf spot would you like to know more about? \n\n"
      when "exit"
        farewell
      else 
