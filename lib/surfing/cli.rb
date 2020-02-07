@@ -36,13 +36,13 @@ or type 'later' to exit the program.\n\n"
          list_surf
          puts "\nWhich surf spot would you like to know more about? \n\n"
        when "later"
-         farewell
+         wipeout
        else 
          puts "Invalid input!"
        end 
      end
    end 
-   def farewell 
+   def wipeout 
      puts "\nHave a great time in California!!\n\n"
    end 
 end 
