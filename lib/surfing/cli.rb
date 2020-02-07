@@ -1,11 +1,11 @@
 class Surfing::CLI 
   
   def call
-    list_surf
+    list_beaches
     menu 
   end
   
-  def list_surf
+  def list_beaches
     puts "\n\nWelcome to the 10 Best Surf Spost in Califrnia!
      (in no particular order)\n"
     # puts "
@@ -33,7 +33,7 @@ or type 'later' to exit the program.\n\n"
        when "2"
        puts "\nmore info about ..."
        when "list"
-         list_surf
+         list_beaches
          puts "\nWhich surf spot would you like to know more about? \n\n"
        when "later"
          wipeout
