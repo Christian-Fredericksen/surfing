@@ -43,7 +43,7 @@ or type 'exit' to exit the program.\n\n"
      end
    end 
    def farewell 
-     puts "\nHave a great time in California!!"
+     puts "\nHave a great time in California!!\n\n"
    end 
 end 
 
