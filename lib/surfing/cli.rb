@@ -27,27 +27,28 @@ class Surfing::CLI
    def menu
     input = nil 
     while input != "later"
-    puts "\nPlease enter the number of the surf spot you'd like to visit
-or type 'later' to exit the program.\n\n"
-       input = gets.strip.downcase 
-       case input 
-       when"1"
-       puts "\nmore info about ..."
-       when "2"
-       puts "\nmore info about ..."
-       when "list"
+      puts "\nPlease enter the number of the surf spot you'd like to visit
+  or type 'later' to exit the program.\n\n"
+       input = gets.strip.downcase
+       
+       if input.to_i > 0
+         the_beach = @beaches[input.to_i-1]
+         puts "#{the_beach.name} - #{the_beach.url}\n\n"
+       elsif input == "list"
          list_beaches
          puts "\nWhich surf spot would you like to know more about? \n\n"
-       when "later"
+       elsif input == "later"
          wipeout
        else 
-         puts "Invalid input!"
+         puts "\nInvalid input!"
        end 
      end
    end 
+   
    def wipeout 
      puts "\nHave a great time in California!!\n\n"
-   end 
+   end
+   
 end 
 
 
