@@ -7,7 +7,7 @@ class Surfing::CLI
   
   def list_beaches
     puts "\n\nWelcome to the 10 Best Surf Spost in Califrnia!
-     (in no particular order)\n"
+     (in no particular order)\n\n"
     # puts "
     # 1) Windansea Beach, La Jolla
     # 2) Swami’s, Encinitas
@@ -20,6 +20,9 @@ class Surfing::CLI
     # 9) Asilomar State Beach, Pacific Grove
     # 10) Mavericks, Half Moon Bay\n\n"
       @beaches = Surf.areas
+      @beaches.each.with_index(1) do |beach, i|
+        puts "#{i}. #{beach.name} - #{beach.url}\n\n"
+      end
   end
    def menu
     input = nil 

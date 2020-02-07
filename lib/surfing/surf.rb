@@ -44,18 +44,18 @@ class Surf
   surf_spot10.name = "Mavericks, Half Moon Bay"
   surf_spot10.url = "TBD"
   
-  puts "\n 1) #{surf_spot1.name}\n #{surf_spot1.url}\n
-2) #{surf_spot2.name}\n #{surf_spot2.url}\n
-3) #{surf_spot3.name}\n #{surf_spot3.url}\n
-4) #{surf_spot4.name}\n #{surf_spot4.url}\n
-5) #{surf_spot5.name}\n #{surf_spot5.url}\n
-6) #{surf_spot6.name}\n #{surf_spot6.url}\n
-7) #{surf_spot7.name}\n #{surf_spot7.url}\n
-8) #{surf_spot8.name}\n #{surf_spot8.url}\n
-9) #{surf_spot9.name}\n #{surf_spot9.url}\n
-10) #{surf_spot10.name}\n #{surf_spot10.url}\n\n"
-  end
+#   puts "\n 1) #{surf_spot1.name}\n #{surf_spot1.url}\n
+# 2) #{surf_spot2.name}\n #{surf_spot2.url}\n
+# 3) #{surf_spot3.name}\n #{surf_spot3.url}\n
+# 4) #{surf_spot4.name}\n #{surf_spot4.url}\n
+# 5) #{surf_spot5.name}\n #{surf_spot5.url}\n
+# 6) #{surf_spot6.name}\n #{surf_spot6.url}\n
+# 7) #{surf_spot7.name}\n #{surf_spot7.url}\n
+# 8) #{surf_spot8.name}\n #{surf_spot8.url}\n
+# 9) #{surf_spot9.name}\n #{surf_spot9.url}\n
+# 10) #{surf_spot10.name}\n #{surf_spot10.url}\n\n"
+#   end
 
-  #[surf_spot1, surf_spot2, surf_spot3, surf_spot4, surf_spot5, surf_spot6, surf_spot7, surf_spot8, surf_spot9, surf_spot10]
+  [surf_spot1, surf_spot2, surf_spot3, surf_spot4, surf_spot5, surf_spot6, surf_spot7, surf_spot8, surf_spot9, surf_spot10]
 end
 end 
