@@ -23,9 +23,9 @@ class Surfing::CLI
   end
    def menu
     input = nil 
-    while input != "exit"
+    while input != "later"
     puts "\nPlease enter the number of the surf spot you'd like to visit
-or type 'exit' to exit the program.\n\n"
+or type 'later' to exit the program.\n\n"
        input = gets.strip.downcase 
        case input 
        when"1"
@@ -35,7 +35,7 @@ or type 'exit' to exit the program.\n\n"
        when "list"
          list_surf
          puts "\nWhich surf spot would you like to know more about? \n\n"
-       when "exit"
+       when "later"
          farewell
        else 
          puts "Invalid input!"
