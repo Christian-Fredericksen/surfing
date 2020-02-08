@@ -1,34 +1,25 @@
 class Surfing::CLI 
   
   def call
-    list_beaches
+    greeting
     menu 
   end
   
-  def list_beaches
-    puts "\n\nWelcome to the 10 Best Surf Spost in Califrnia!
-     (in no particular order)\n\n"
-    # puts "
-    # 1) Windansea Beach, La Jolla
-    # 2) Swami’s, Encinitas
-    # 3) Trestles (San Onofre State Beach), San Clemente 
-    # 4) The Wedge, Newport Beach
-    # 5) Huntington Beach Pier, Huntington Beach
-    # 6) Surfrider Beach, Malibu
-    # 7) Rincon Point, Carpinteria
-    # 8) Pismo Beach Pier, Pismo Beach
-    # 9) Asilomar State Beach, Pacific Grove
-    # 10) Mavericks, Half Moon Bay\n\n"
-      @beaches = Surf.areas
-      @beaches.each.with_index(1) do |beach, i|
-        puts "#{i}. #{beach.name} - #{beach.url}\n\n"
-      end
-  end
+  def greeting
+    puts "\n\nWelcome to the 10 MOST RADICAL and GNARLY surf spots EVER in Califrnia!"
+    puts "(Hyperbole Rules!)"
+  end 
+  
    def menu
-    input = nil 
+     puts "\n\nBruh! Wanna see a list of pier pounders? Just enter 'list' 
+or type 'later' to exit the program.\n\n"
+    input
+   end
+   
+   def input
+     input = nil 
     while input != "later"
-      puts "\nPlease enter the number of the surf spot you'd like to visit
-  or type 'later' to exit the program.\n\n"
+      
        input = gets.strip.downcase
        
        if input.to_i > 0
@@ -36,17 +27,33 @@ class Surfing::CLI
          puts "#{the_beach.name} - #{the_beach.url}\n\n"
        elsif input == "list"
          list_beaches
-         puts "\nWhich surf spot would you like to know more about? \n\n"
        elsif input == "later"
-         wipeout
+         shaka
        else 
          puts "\nInvalid input!"
-       end 
+       end
      end
    end 
+    
+  
+  
+  def list_beaches
+    puts "\n\nCheck out this list! From catching 'the drop'\nto getting 'worked',\nthese are the sets to catch!"
+     puts "(in no particular order)\n\n"
    
-   def wipeout 
+      @beaches = Surf.areas
+      @beaches.each.with_index(1) do |beach, i|
+        puts "#{i}. #{beach.name} - #{beach.url}\n\n"
+      end
+      
+      puts "Wanna 'get wet'? Enter a digit, dude. Or 'later' to bail.\n\n"
+      input
+  end
+  
+   
+   def shaka 
      puts "\nHave a great time in California!!\n\n"
+     exit
    end
    
 end 
