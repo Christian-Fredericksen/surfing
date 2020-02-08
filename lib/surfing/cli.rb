@@ -24,13 +24,14 @@ or type 'later' to exit the program.\n\n"
        
        if input.to_i > 0
          the_beach = @beaches[input.to_i-1]
-         puts "#{the_beach.name}\n#{the_beach.url}\n\n"
+         puts "\n#{the_beach.name}\n#{the_beach.url}\n#{the_beach.shop}\n#{the_beach.shop_url}\n#{the_beach.food}\n#{the_beach.food_url}\n"
+         puts "\nTo see another beach enter a digit,\nor 'list' to see them all again,\nor 'later' to bail.\n\n"
        elsif input == "list"
          list_beaches
        elsif input == "later"
          shaka
        else 
-         puts "\nInvalid input!"
+         puts "\nWHOA! Bad move, Barney! Try again or say 'later':\n\n"
        end
      end
    end 
@@ -43,10 +44,10 @@ or type 'later' to exit the program.\n\n"
    
       @beaches = Surf.areas
       @beaches.each.with_index(1) do |beach, i|
-        puts "#{i}. #{beach.name} - #{beach.url}\n\n"
+        puts "#{i}. #{beach.name}" #- #{beach.url}\n\n"
       end
       
-      puts "Wanna 'get wet'?\nEnter a digit, dude.\nOr 'later' to bail.\n\n"
+      puts "\nWanna 'get wet'?\nEnter a digit, dude.\nOr 'later' to bail.\n\n"
       input
   end
   
