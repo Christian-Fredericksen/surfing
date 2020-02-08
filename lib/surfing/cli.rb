@@ -1,4 +1,4 @@
-7class Surfing::CLI 
+class Surfing::CLI 
   
   def call
     greeting
@@ -22,7 +22,7 @@ or type 'later' to exit the program.\n\n"
       
        input = gets.strip.downcase
        
-       if input.to_i > 0
+       if input.to_i > 0 && input.to_i < Surf.areas.length+1
          the_beach = @beaches[input.to_i-1]
          puts "\nBEACH: #{the_beach.name}\nWEBSITE: #{the_beach.url}\nLOCAL_SURF_SHOP: #{the_beach.shop}\nGOOD_GRUB: #{the_beach.food}\n"
          puts "\nTo see another beach enter a digit,\nor 'list' to see them all again,\nor 'later' to bail.\n\n"

@@ -12,6 +12,7 @@ class Surf
   surf_spot1.food = "Eat Here!"
   surf_spot1.food_url = "https://www.lunchbucket.com"
   
+  
   surf_spot2 = self.new 
   surf_spot2.name = "Swami’s, Encinitasands"
   surf_spot2.url = "https://en.wikipedia.org/wiki/Aspen_Highlands"
@@ -19,6 +20,8 @@ class Surf
   surf_spot2.shop_url = "https://www.surfshop.com"
   surf_spot2.food = "Eat Here!"
   surf_spot2.food_url = "https://www.lunchbucket.com"
+
+  
   
   surf_spot3 = self.new 
   surf_spot3.name = "Trestles (San Onofre State Beach), San Clemente"
@@ -28,6 +31,8 @@ class Surf
   surf_spot3.food = "Eat Here!"
   surf_spot3.food_url = "https://www.lunchbucket.com"
   
+  
+  
   surf_spot4 = self.new 
   surf_spot4.name = "The Wedge, Newport Beach"
   surf_spot4.url = "https://en.wikipedia.org/wiki/Beaver_Creek_Resort"
@@ -35,6 +40,8 @@ class Surf
   surf_spot4.shop_url = "https://www.surfshop.com"
   surf_spot4.food = "Eat Here!"
   surf_spot4.food_url = "https://www.lunchbucket.com"
+  
+  
   
   surf_spot5 = self.new 
   surf_spot5.name = "Huntington Beach Pier, Huntington Beach"
@@ -44,6 +51,8 @@ class Surf
   surf_spot5.food = "Eat Here!"
   surf_spot5.food_url = "https://www.lunchbucket.com"
   
+  
+  
   surf_spot6 = self.new 
   surf_spot6.name = "Surfrider Beach, Malibu"
   surf_spot6.url = "https://en.wikipedia.org/wiki/Buttermilk_(ski_area)"
@@ -51,6 +60,8 @@ class Surf
   surf_spot6.shop_url = "https://www.surfshop.com"
   surf_spot6.food = "Eat Here!"
   surf_spot6.food_url = "https://www.lunchbucket.com"
+  
+  
   
   surf_spot7 = self.new 
   surf_spot7.name = "Rincon Point, Carpinteria"
@@ -60,6 +71,8 @@ class Surf
   surf_spot7.food = "Eat Here!"
   surf_spot7.food_url = "https://www.lunchbucket.com"
   
+  
+  
   surf_spot8 = self.new 
   surf_spot8.name = "Pismo Beach Pier, Pismo Beach"
   surf_spot8.url = "TBD"
@@ -67,6 +80,8 @@ class Surf
   surf_spot8.shop_url = "https://www.surfshop.com"
   surf_spot8.food = "Eat Here!"
   surf_spot8.food_url = "https://www.lunchbucket.com"
+  
+  
   
   surf_spot9 = self.new 
   surf_spot9.name = "Asilomar State Beach, Pacific Grove"
@@ -76,6 +91,8 @@ class Surf
   surf_spot9.food = "Eat Here!"
   surf_spot9.food_url = "https://www.lunchbucket.com"
   
+  
+  
   surf_spot10 = self.new 
   surf_spot10.name = "Mavericks, Half Moon Bay"
   surf_spot10.url = "TBD"
@@ -83,8 +100,9 @@ class Surf
   surf_spot10.shop_url = "https://www.surfshop.com"
   surf_spot10.food = "Eat Here!"
   surf_spot10.food_url = "https://www.lunchbucket.com"
+  
 
 
-  [surf_spot1, surf_spot2, surf_spot3, surf_spot4, surf_spot5, surf_spot6, surf_spot7, surf_spot8, surf_spot9, surf_spot10]
-end
+  [surf_spot1, surf_spot2, surf_spot3, surf_spot4, surf_spot5, surf_spot6, surf_spot7, surf_spot8, surf_spot9, surf_spot10 ]
+end 
 end 
