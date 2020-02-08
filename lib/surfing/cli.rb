@@ -24,7 +24,7 @@ or type 'later' to exit the program.\n\n"
        
        if input.to_i > 0
          the_beach = @beaches[input.to_i-1]
-         puts "#{the_beach.name} - #{the_beach.url}\n\n"
+         puts "#{the_beach.name}\n#{the_beach.url}\n\n"
        elsif input == "list"
          list_beaches
        elsif input == "later"
@@ -46,7 +46,7 @@ or type 'later' to exit the program.\n\n"
         puts "#{i}. #{beach.name} - #{beach.url}\n\n"
       end
       
-      puts "Wanna 'get wet'? Enter a digit, dude. Or 'later' to bail.\n\n"
+      puts "Wanna 'get wet'?\nEnter a digit, dude.\nOr 'later' to bail.\n\n"
       input
   end
   
