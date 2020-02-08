@@ -2,6 +2,7 @@
 require_relative "./surfing/version"
 require_relative "./surfing/cli"
 require_relative "./surfing/surf"
+require_relative "./surfing/beaches"
 # module Surfing
 #   class Error < StandardError; end
 #   # Your code goes here...

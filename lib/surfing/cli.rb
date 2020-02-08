@@ -1,4 +1,4 @@
-class Surfing::CLI 
+7class Surfing::CLI 
   
   def call
     greeting
@@ -24,7 +24,7 @@ or type 'later' to exit the program.\n\n"
        
        if input.to_i > 0
          the_beach = @beaches[input.to_i-1]
-         puts "\n#{the_beach.name}\n#{the_beach.url}\n#{the_beach.shop}\n#{the_beach.shop_url}\n#{the_beach.food}\n#{the_beach.food_url}\n"
+         puts "\nBEACH: #{the_beach.name}\nWEBSITE: #{the_beach.url}\nLOCAL_SURF_SHOP: #{the_beach.shop}\nGOOD_GRUB: #{the_beach.food}\n"
          puts "\nTo see another beach enter a digit,\nor 'list' to see them all again,\nor 'later' to bail.\n\n"
        elsif input == "list"
          list_beaches
@@ -39,7 +39,7 @@ or type 'later' to exit the program.\n\n"
   
   
   def list_beaches
-    puts "\n\nCheck out this list! From catching 'the drop'\nto getting 'worked',\nthese are the sets to catch!"
+    puts "\n\nCheck out this list!\nFrom catching 'the drop'\nto getting 'worked',\nthese are the sets to catch!"
      puts "(in no particular order)\n\n"
    
       @beaches = Surf.areas
@@ -48,7 +48,7 @@ or type 'later' to exit the program.\n\n"
       end
       
       puts "\nWanna 'get wet'?\nEnter a digit, dude.\nOr 'later' to bail.\n\n"
-      input
+      #@location = Beaches.beach
   end
   
    
