@@ -2,6 +2,14 @@ class Surf
  
   attr_accessor :name, :url, :shop, :shop_url, :food, :food_url 
   
+  def self.scrape_beaches
+    beaches = []
+    
+    #some code Here
+    beaches 
+  end
+    
+  
   def self.areas
     #puts "I have no idea what Im doing dhoo!! "
   surf_spot1 = self.new
