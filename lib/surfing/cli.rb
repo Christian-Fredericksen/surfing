@@ -6,7 +6,7 @@ class Surfing::CLI
   end
   
   def greeting
-    puts "\n\nWelcome to the 10 MOST RADICAL and GNARLY surf spots EVER in Califrnia!"
+    puts "\n\nWelcome to the 10 MOST RADICAL and GNARLY surf spots EVER in California!"
     puts "(Hyperbole Rules!)"
   end 
   
