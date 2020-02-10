@@ -1,5 +1,5 @@
 #equire "surfing/version"
-#require "nokogiri"
+require "pry"
 require_relative "./surfing/version"
 require_relative "./surfing/cli"
 require_relative "./surfing/surf"

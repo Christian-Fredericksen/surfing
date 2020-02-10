@@ -5,10 +5,18 @@ class Surf
   def self.scrape_beaches
     beaches = []
     
-    #some code Here
+    beaches << self.scrape_localemagazine
+    
+    
     beaches 
   end
     
+  def self.scrape_localemagazine
+    doc = Nokogiri::HTML(open("https://localemagazine.com/beginner-surf-spots/"))
+    binding.pry 
+  end
+  
+  
   
   def self.areas
     #puts "I have no idea what Im doing dhoo!! "
