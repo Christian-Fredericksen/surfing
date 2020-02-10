@@ -1,4 +1,5 @@
 #equire "surfing/version"
+require "open-uri"
 require "pry"
 require_relative "./surfing/version"
 require_relative "./surfing/cli"
