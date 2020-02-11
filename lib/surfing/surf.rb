@@ -1,29 +1,41 @@
+require "nokogiri"
+require "open-uri"
+require "pry"
 class Surf
  
-  attr_accessor :name, :info  
+  attr_accessor :name, :info
   
-  def self.areas
-    @beaches = []
-    @beaches << self.scrape_beach1
-    @beaches << self.scrape_beach2
-    @beaches << self.scrape_beach3
+  @@all =[]
+  
+  
+  def save
+    @@all << self
+  end
+  
+  def self.all
+    @@all
   end
     
-  def self.scrape_beach1
+  def self.scrape_beach
     doc = Nokogiri::HTML(open("https://localemagazine.com/beginner-surf-spots/"))
     binding.pry
-    title = doc.css("h2 span").text.split(/\n+/)[0]
+    
+    
+    # self.new 
+    # doc = Nokogiri::HTML(open("https://localemagazine.com/beginner-surf-spots/"))
+    # self.name = doc.css("h2 span").text.split(/\n+/)[0]
+    # self.info = doc.css("p span")[4,5].text
   end
   
   def self.scrape_beach2
     doc = Nokogiri::HTML(open("https://localemagazine.com/beginner-surf-spots/"))
-    title = doc.css("h2 span").text.split(/\n+/)[1]
+    name = doc.css("h2 span").text.split(/\n+/)[1]
     
   end
   
    def self.scrape_beach3
     doc = Nokogiri::HTML(open("https://localemagazine.com/beginner-surf-spots/"))
-    title = doc.css("h2 span").text.split(/\n+/)
+    name = doc.css("h2 span").text.split(/\n+\rr\/)
   end
   
   #def self.areas
@@ -130,3 +142,5 @@ class Surf
   #[surf_spot1, surf_spot2, surf_spot3, surf_spot4, surf_spot5, surf_spot6, surf_spot7, surf_spot8, surf_spot9, surf_spot10 ]
 #end 
 end 
+Surf.scrape_beach
+
