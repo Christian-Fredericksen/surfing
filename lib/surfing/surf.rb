@@ -1,23 +1,29 @@
 class Surf
  
-  attr_accessor :name, :url, :shop, :shop_url, :food, :food_url 
-  
-  def self.scrape_beaches
-    beaches = []
-    
-    beaches << self.scrape_localemagazine
-    
-    
-    beaches 
-  end
-    
-  def self.scrape_localemagazine
-    doc = Nokogiri::HTML(open("https://localemagazine.com/beginner-surf-spots/"))
-    binding.pry 
-  end
+  attr_accessor :name, :info  
   
   def self.areas
-    self.scrape_beaches
+    @beaches = []
+    @beaches << self.scrape_beach1
+    @beaches << self.scrape_beach2
+    @beaches << self.scrape_beach3
+  end
+    
+  def self.scrape_beach1
+    doc = Nokogiri::HTML(open("https://localemagazine.com/beginner-surf-spots/"))
+    binding.pry
+    title = doc.css("h2 span").text.split(/\n+/)[0]
+  end
+  
+  def self.scrape_beach2
+    doc = Nokogiri::HTML(open("https://localemagazine.com/beginner-surf-spots/"))
+    title = doc.css("h2 span").text.split(/\n+/)[1]
+    
+  end
+  
+   def self.scrape_beach3
+    doc = Nokogiri::HTML(open("https://localemagazine.com/beginner-surf-spots/"))
+    title = doc.css("h2 span").text.split(/\n+/)
   end
   
   #def self.areas

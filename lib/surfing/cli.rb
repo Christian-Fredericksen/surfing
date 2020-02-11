@@ -44,7 +44,7 @@ or type 'later' to exit the program.\n\n"
    
       @beaches = Surf.areas
       @beaches.each.with_index(1) do |beach, i|
-        puts "#{i}. #{beach.name}" #- #{beach.url}\n\n"
+        puts "#{i}. #{beach}"
       end
       
       puts "\nWanna 'get wet'?\nEnter a digit, dude.\nOr 'later' to bail.\n\n"
