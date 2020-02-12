@@ -11,26 +11,30 @@ class Surfing::CLI
   end 
   
    def menu
+     input = nil
      puts "\n\nBruh! Wanna see a list of pier pounders? Just enter 'list' 
 or type 'later' to exit the program.\n\n"
-    input
-   end
-   
-   def input
-     input = nil 
     while input != "later"
-      
-       input = gets.strip.downcase
+    input = gets.strip.downcase
+    
+   #if input.to_i > 0 && input.to_i < Surf.scrape_beach.length+1
+     
+        # the_beach = @beaches[input.to_i-1]
+        # the_info = @info[input.to_i-1]
+        # puts "\nBEACH: #{the_beach}\n"
+        # puts "\nTo see another beach enter a digit,\nor 'list' to see them all again,\nor 'later' to bail.\n\n"
+   
+   
        
-       if input.to_i > 0 && input.to_i < Surf.scrape_beach.length+1
-         the_beach = @beaches[input.to_i-1]
-         #the_info = @info[input.to_i-1]
-         puts "\nBEACH: #{the_beach}\n"
-         puts "\nTo see another beach enter a digit,\nor 'list' to see them all again,\nor 'later' to bail.\n\n"
-       elsif input.to_i > 0 && input.to_i < Surf.scrape_info.length+1
-         the_info = @info[input.to_i-1]
-         puts "\nBEACH: #{the_beach}\nINFO: #{the_info}"
-         puts "\nTo see another beach enter a digit,\nor 'list' to see them all again,\nor 'later' to bail.\n\n"
+      
+      if  input.to_i > 0 && input.to_i < Surf.scrape_beach.length+1
+      puts Surf.scrape_beach[input.to_i-1]
+      puts Surf.scrape_info[input.to_i-1]
+      
+        # the_info = @info[input.to_i-1]
+        # puts "\nBEACH: #{the_beach}\nINFO: #{the_info}"
+        # puts "\nTo see another beach enter a digit,\nor 'list' to see them all again,\nor 'later' to bail.\n\n"
+        
        elsif input == "list"
          list_beaches
        elsif input == "later"

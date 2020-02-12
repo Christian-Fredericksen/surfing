@@ -23,9 +23,9 @@ class Surf
     
   def self.scrape_beach
     shreck = self.new 
-    html = open('https://localemagazine.com/beginner-surf-spots/')
+    html = open('https://wanderwisdom.com/travel-destinations/A-Locals-Guide-to-Orange-County-Beaches')
     doc = Nokogiri::HTML(html)
-    name = doc.css(".entry-content h2")
+    name = doc.css("h2.subtitle")
     the_name = name.map{|title| title.text.strip}
     # binding.pry 
    end
@@ -34,9 +34,9 @@ class Surf
     donkey = self.new 
     html = open('https://localemagazine.com/beginner-surf-spots/')
     doc = Nokogiri::HTML(html)
-    info = doc.css(".entry-content h2 iframe span p")
-    the_info = info.map{|title| title.text.strip}
-    binding.pry
+    info = doc.css("p span span")
+    the_info = info.map{|info| info.text.strip}
+    #binding.pry
    end 
   
     
