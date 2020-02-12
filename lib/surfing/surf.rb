@@ -13,14 +13,31 @@ class Surf
   def self.all
     @@all
   end
+  
+  def initialize
+    @name = name
+    @info = info
+    @@all << self
+  end 
+    
     
   def self.scrape_beach
+    shreck = self.new 
     html = open('https://localemagazine.com/beginner-surf-spots/')
     doc = Nokogiri::HTML(html)
-    all_titles = doc.css(".entry-content h2")
-    titles_in_array = all_titles.map{|title| title.text.strip}
-    #binding.pry 
+    name = doc.css(".entry-content h2")
+    the_name = name.map{|title| title.text.strip}
+    # binding.pry 
    end
+   
+   def self.scrape_info
+    donkey = self.new 
+    html = open('https://localemagazine.com/beginner-surf-spots/')
+    doc = Nokogiri::HTML(html)
+    info = doc.css(".entry-content h2 iframe span p")
+    the_info = info.map{|title| title.text.strip}
+    binding.pry
+   end 
   
      
   #   doc = Nokogiri::HTML(open("https://localemagazine.com/beginner-surf-spots/"))

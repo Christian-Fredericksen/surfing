@@ -24,7 +24,8 @@ or type 'later' to exit the program.\n\n"
        
        if input.to_i > 0 && input.to_i < Surf.scrape_beach.length+1
          the_beach = @beaches[input.to_i-1]
-         puts "\nBEACH: #{the_beach}\n"
+         the_info = @beaches[input.to_i-1]
+         puts "\nBEACH: #{the_beach}\nINFO: #{the_info}"
          puts "\nTo see another beach enter a digit,\nor 'list' to see them all again,\nor 'later' to bail.\n\n"
        elsif input == "list"
          list_beaches
