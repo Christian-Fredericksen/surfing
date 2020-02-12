@@ -17,7 +17,7 @@ class Surf
   def initialize
     @name = name
     @info = info
-    @@all << self
+    @@all << save
   end 
     
     
@@ -39,11 +39,7 @@ class Surf
     binding.pry
    end 
   
-     
-  #   doc = Nokogiri::HTML(open("https://localemagazine.com/beginner-surf-spots/"))
-  #   name = doc.css("h2 span").text.split(/\n+/)[1]
     
-  # end
   
   
 end 
