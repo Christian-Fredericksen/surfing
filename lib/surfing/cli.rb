@@ -22,9 +22,9 @@ or type 'later' to exit the program.\n\n"
       
        input = gets.strip.downcase
        
-       if input.to_i > 0 && input.to_i < Surf.areas.length+1
+       if input.to_i > 0 && input.to_i < Surf.scrape_beach.length+1
          the_beach = @beaches[input.to_i-1]
-         puts "\nBEACH: #{the_beach.name}\nWEBSITE: #{the_beach.url}\nLOCAL_SURF_SHOP: #{the_beach.shop}\nGOOD_GRUB: #{the_beach.food}\n"
+         puts "\nBEACH: #{the_beach}\n"
          puts "\nTo see another beach enter a digit,\nor 'list' to see them all again,\nor 'later' to bail.\n\n"
        elsif input == "list"
          list_beaches
@@ -39,14 +39,15 @@ or type 'later' to exit the program.\n\n"
   
   
   def list_beaches
+    
     puts "\n\nCheck out this list!\nFrom catching 'the drop'\nto getting 'worked',\nthese are the sets to catch!"
      puts "(in no particular order)\n\n"
    
-      @beaches = Surf.areas
+      @beaches = Surf.scrape_beach
       @beaches.each.with_index(1) do |beach, i|
+       
         puts "#{i}. #{beach}"
       end
-      
       puts "\nWanna 'get wet'?\nEnter a digit, dude.\nOr 'later' to bail.\n\n"
       #@location = Beaches.beach
   end
