@@ -33,6 +33,8 @@ class Surfing::CLI
     puts "\n\nCheck out this list!\nFrom catching 'the drop'\nto getting 'worked',\nthese are the sets to catch!"
      puts "(in no particular order)\n\n"
       @beaches = Surf.all
+      @beaches.shift
+      @beaches.pop
       @beaches.each.with_index(1) do |beach, i|
         puts "#{i}. #{beach.name}"
       end
