@@ -1,7 +1,7 @@
 class Surfing::CLI 
   
   def call
-    Surf.scrapped_data
+    Surf.scraped_data
     greeting
     menu 
   end
@@ -16,8 +16,6 @@ class Surfing::CLI
      puts "\n\nBruh! Wanna see a list of pier pounders?\nJust enter 'list'\nor type 'later' to exit the program.\n\n"
     while input != "later"
     input = gets.strip.downcase
-      # if  input.to_i > 0 && input.to_i < Surf.scrapped_data.length+1
-      # puts Surf.all[input.to_i-1]
        if input == "list"
          list_beaches
        elsif input == "later"
@@ -41,8 +39,8 @@ class Surfing::CLI
       puts "\nWanna 'get wet'?\nEnter a digit, dude.\nOr 'later' to bail.\n\n"
       while input != "later"
     input = gets.strip.downcase
-      if  input.to_i > 0 && input.to_i < Surf.scrapped_data.length+1
-      puts "BEACH: #{Surf.name}\n#{Surf.info}"
+      if  input.to_i > 0 && input.to_i < Surf.all.length+1
+      puts "BEACH: #{Surf.name}\n"##{Surf.info}"
        elsif input == "later"
          shaka
        else 
