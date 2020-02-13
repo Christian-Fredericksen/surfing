@@ -42,12 +42,22 @@ class Surf
   def self.scrapped_data
     html = open('https://wanderwisdom.com/travel-destinations/A-Locals-Guide-to-Orange-County-Beaches')
     doc = Nokogiri::HTML(html)
-    container = doc.css("div.full.module.moduleText")
+    container = doc.css("div.moduleText")
     container.each do |b|
-      title = b.css("h2.subtitle").text
-      info = b.css("p").text
-      Surf.new(name, stats)
-  end  
+      title = b.css("h2.subtitle")
+      info = b.css("p")
+      title.each_with_index do |t, i|
+          bubba = t.text
+          info = info[i].text
+          Surf.new
+          doc.xpath('//p/* | //p/text()').count # => 10
+ndst = doc.search('//p/* | //p/text()')[1..-1]
+ndst.remove
+puts doc.to_s
+      #binding.pry
+  end
+end
+end
   
   
 end 

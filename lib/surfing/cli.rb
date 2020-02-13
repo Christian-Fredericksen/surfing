@@ -27,9 +27,9 @@ or type 'later' to exit the program.\n\n"
    
        
       
-      if  input.to_i > 0 && input.to_i < Surf.scrape_beach.length+1
-      puts Surf.scrape_beach[input.to_i-1]
-      puts Surf.scrape_info[input.to_i-1]
+      if  input.to_i > 0 && input.to_i < Surf.scrapped_data.length+1
+      puts Surf.scrapped_data[input.to_i-1]
+      puts Surf.scrapped_data[input.to_i-1]
       
         # the_info = @info[input.to_i-1]
         # puts "\nBEACH: #{the_beach}\nINFO: #{the_info}"
@@ -52,7 +52,7 @@ or type 'later' to exit the program.\n\n"
     puts "\n\nCheck out this list!\nFrom catching 'the drop'\nto getting 'worked',\nthese are the sets to catch!"
      puts "(in no particular order)\n\n"
    
-      @beaches = Surf.scrape_beach
+      @beaches = Surf.scrapped_data
       @beaches.each.with_index(1) do |beach, i|
        
         puts "#{i}. #{beach}"
