@@ -3,7 +3,7 @@ class Surf
  
   attr_accessor :name, :info
   
-  @@all =[]
+  @@all = []
   
   
   def save
@@ -11,13 +11,13 @@ class Surf
   end
   
   def self.all
-    @@all
+    @@all.drop(1)
   end
   
   def initialize
     @name = name
     @info = info
-    @@all << save
+    save
   end 
     
     
@@ -42,22 +42,22 @@ class Surf
   def self.scrapped_data
     html = open('https://wanderwisdom.com/travel-destinations/A-Locals-Guide-to-Orange-County-Beaches')
     doc = Nokogiri::HTML(html)
-    container = doc.css("div.moduleText")
+    container = doc.css(".full.module.moduleText")
     container.each do |b|
-      title = b.css("h2.subtitle")
-      info = b.css("p")
-      title.each_with_index do |t, i|
-          bubba = t.text
-          info = info[i].text
+      
+      
+      # beach_id = ".full.module.moduleText"['id'].split('_').last.to_i
+      # title_el = ".full.module.moduleText".at_css('h1 a')
+      
+      
+      
+      title = b.css("h2.subtitle").text.strip
+      
+      info = b.css("p").text.strip
           Surf.new
-          doc.xpath('//p/* | //p/text()').count # => 10
-ndst = doc.search('//p/* | //p/text()')[1..-1]
-ndst.remove
-puts doc.to_s
       #binding.pry
+    end
   end
-end
-end
   
   
 end 
