@@ -32,6 +32,9 @@ class Surf
     end
   end
   
+  def self.find(input) 
+    self.all[input]
+  end 
   
 end 
 
