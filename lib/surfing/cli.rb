@@ -44,7 +44,7 @@ class Surfing::CLI
   end 
   
   def surf_entry
-      input = gets.strip
+      input = gets.strip.downcase
         if input.to_i > 0 && input.to_i <= Surf.all.count
         show_info(input)
        
