@@ -1,6 +1,5 @@
 class Surfing::CLI 
-  
-   def call
+  def call
     Surf.scraped_data
     greeting  
   end
@@ -9,8 +8,7 @@ class Surfing::CLI
     puts "(Hyperbole Rules!)"
     menu 
   end 
-  
-  def menu
+   def menu
      puts "\n\nBruh! Wanna see a list of pier pounders?\nJust enter 'list'\nor type 'later' to exit the program.\n\n"
      input = gets.strip.downcase
        if input == "list"
@@ -22,11 +20,6 @@ class Surfing::CLI
          menu
        end
    end 
-  
-  
-    
-  
-  
   def list_beaches
     puts "\n\nCheck out this list!\nFrom catching 'the drop'\nto getting 'worked',\nthese are the sets to catch!"
     puts "(in no particular order)\n\n"
@@ -39,8 +32,7 @@ class Surfing::CLI
       puts "\nWanna 'get wet'?\nEnter a digit, dude.\nOr 'later' to bail.\n\n"
       surf_entry
     end 
-    
-  def surf_entry
+    def surf_entry
       input = gets.strip.downcase
       if input == "later"
         shaka
@@ -51,19 +43,15 @@ class Surfing::CLI
         surf_entry
       end
     end 
-      
   def show_info(input)
     d = Surf.find(input)
           puts "\nBEACH:\n#{d.name}\n\nINFO:\n#{d.info}\n\n"
           puts "\nWanna see something else?\nEnter a digit, dude.\nOr 'later' to bail.\n\n"
           surf_entry
   end 
-  
-   
    def shaka 
      puts "\nHave a great time in California!!\n\n"
    end
-   
 end 
 
 
