@@ -39,19 +39,37 @@ class Surfing::CLI
         puts "#{i}. #{beach.name}"
       end
       puts "\nWanna 'get wet'?\nEnter a digit, dude.\nOr 'later' to bail.\n\n"
-      while input != "later"
-      input = gets.to_i-1
-      if  input.between?(0,Surf.all.length) #to_i > 0 && input.to_i < Surf.all.length+1
-        d = Surf.find(input)
-      puts "\nBEACH:\n#{d.name}\n\nINFO:\n#{d.info}\n\n"
-      puts "\nWanna see something else?\nEnter a digit, dude.\nOr 'later' to bail.\n\n"
       input = gets.strip.downcase
-       elsif input == "later"
-         shaka
-       elsif input != "later" 
-         puts "\nWHOA! Bad move, Barney! Try again or say 'later':\n\n"
-       end
-     end
+      case input
+      when "later"
+        shaka
+        input = gets.to_i-1
+      when "1" #Surf.all.length #input.to_i-1 >0 && input.to_i-1 <= Surf.all.length
+        show_info
+      else
+        puts "\nWHOA! Bad move, Barney! Try again or say 'later':\n\n"
+      end
+      
+  def show_info
+    puts "hello"
+    d = Surf.find(input)
+          puts "\nBEACH:\n#{d.name}\n\nINFO:\n#{d.info}\n\n"
+          puts "\nWanna see something else?\nEnter a digit, dude.\nOr 'later' to bail.\n\n"
+  end 
+        
+            
+    #   input = gets.to_i-1
+    #   if  input.between?(0,Surf.all.length) #to_i > 0 && input.to_i < Surf.all.length+1
+    #     d = Surf.find(input)
+    #   puts "\nBEACH:\n#{d.name}\n\nINFO:\n#{d.info}\n\n"
+    #   puts "\nWanna see something else?\nEnter a digit, dude.\nOr 'later' to bail.\n\n"
+    #   input = gets.strip.downcase
+    #   elsif input == "later"
+    #     shaka
+    #   elsif input != "later" 
+    #     puts "\nWHOA! Bad move, Barney! Try again or say 'later':\n\n"
+    #   end
+    # end
   end
   
    
