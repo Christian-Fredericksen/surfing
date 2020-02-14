@@ -27,7 +27,7 @@ class Surfing::CLI
        end
    end
    
-   @@all = []
+   
    
   def list_beaches
     puts "\n\nCheck out this list!\nFrom catching 'the drop'\nto getting 'worked',\nthese are the sets to catch!"
@@ -35,7 +35,7 @@ class Surfing::CLI
       @beaches = Surf.all
       @beaches.shift
       @beaches.pop
-      @@all << @beaches
+      @@list = @beaches
       @beaches.each.with_index(1) do |beach, i|
         puts "#{i}. #{beach.name}"
       end
@@ -60,7 +60,7 @@ class Surfing::CLI
   end
      
      def re_list
-        @@all.each.with_index(1) do |beach, i|
+        @@list.each.with_index(1) do |beach, i|
         puts "#{i}. #{beach.name}"
      end
      puts "\nWanna 'get wet'?\nEnter a digit, dude.\nOr 'later' to bail.\n\n"
