@@ -43,10 +43,12 @@ class Surfing::CLI
       input = gets.to_i-1
       if  input.between?(0,Surf.all.length) #to_i > 0 && input.to_i < Surf.all.length+1
         d = Surf.find(input)
-      puts "\nBEACH:\n#{d.name}\n\nINFO:\n#{d.info}"
+      puts "\nBEACH:\n#{d.name}\n\nINFO:\n#{d.info}\n\n"
+      puts "\nWanna see something else?\nEnter a digit, dude.\nOr 'later' to bail.\n\n"
+      input = gets.strip.downcase
        elsif input == "later"
          shaka
-       else 
+       elsif input != "later" 
          puts "\nWHOA! Bad move, Barney! Try again or say 'later':\n\n"
        end
      end
