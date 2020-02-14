@@ -32,12 +32,12 @@ class Surfing::CLI
       puts "\nWanna 'get wet'?\nEnter a digit, dude.\nOr 'later' to bail.\n\n"
       surf_entry
     end 
-    def surf_entry
-      input = gets.strip.downcase
-      if input == "later"
-        shaka
-      elsif input.to_i.between?(0, @beaches.size) 
+     def surf_entry
+      input = gets.strip
+      if input.to_i.between?(0, Surf.all.count) && input != input.to_s
         show_info(input)
+      elsif input.downcase == "later"
+        shaka
       else
         puts "\nWHOA! Bad move, Barney! Try again or say 'later'\n\n"
         surf_entry
