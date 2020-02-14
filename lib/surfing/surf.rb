@@ -28,12 +28,11 @@ class Surf
       name = b.css("h2.subtitle").text.strip
       info = b.css("p").text.strip
        Surf.new(name, info)
-      #binding.pry
     end
   end
   
   def self.find(input) 
-    self.all[input]
+    self.all[input.to_i - 1]
   end 
   
 end 
