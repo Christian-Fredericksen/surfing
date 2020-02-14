@@ -40,10 +40,10 @@ class Surfing::CLI
       end
       puts "\nWanna 'get wet'?\nEnter a digit, dude.\nOr 'later' to bail.\n\n"
       while input != "later"
-    input = gets.to_i-1
+      input = gets.to_i-1
       if  input.between?(0,Surf.all.length) #to_i > 0 && input.to_i < Surf.all.length+1
         d = Surf.find(input)
-      puts d.info #"BEACH: #{Surf.name}\n"##{Surf.info}"
+      puts "\nBEACH:\n#{d.name}\n\nINFO:\n#{d.info}"
        elsif input == "later"
          shaka
        else 
