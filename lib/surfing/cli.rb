@@ -45,10 +45,11 @@ class Surfing::CLI
         shaka
         input = gets.to_i-1
       when "1" #Surf.all.length #input.to_i-1 >0 && input.to_i-1 <= Surf.all.length
-        show_info
+      show_info
       else
-        puts "\nWHOA! Bad move, Barney! Try again or say 'later':\n\n"
+        puts "\nWHOA! Bad move, Barney! Try again or say 'later'\n\n"
       end
+    end 
       
   def show_info
     puts "hello"
@@ -70,7 +71,7 @@ class Surfing::CLI
     #     puts "\nWHOA! Bad move, Barney! Try again or say 'later':\n\n"
     #   end
     # end
-  end
+  
   
    
    def shaka 
