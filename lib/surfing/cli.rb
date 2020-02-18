@@ -1,6 +1,4 @@
-class Surfing::CLI 
-  
-  attr_accessor :name, :info
+class Surfing::CLI
   
   def call
     Surf.scraped_data
