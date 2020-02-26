@@ -1,7 +1,7 @@
 class Surfing::CLI
   
   def call
-    Surf.scraped_data
+    Scraper.scraped_data
     greeting  
   end
   
@@ -21,19 +21,13 @@ class Surfing::CLI
        else 
          puts "\nWHOA! Bad move, Barney! Try again or say 'later':\n\n"
          menu
-        
        end
    end
-   
-   
    
   def list_beaches
     puts "\n\nCheck out this list!\nFrom catching 'the drop'\nto getting 'worked',\nthese are the sets to catch!"
     puts "(in no particular order)\n\n"
       @beaches = Surf.all
-      @beaches.shift
-      @beaches.pop
-      @@list = @beaches
       @beaches.each.with_index(1) do |beach, i|
         puts "#{i}. #{beach.name}"
       end
@@ -58,7 +52,7 @@ class Surfing::CLI
   end
      
      def re_list
-        @@list.each.with_index(1) do |beach, i|
+        @beaches.each.with_index(1) do |beach, i|
         puts "#{i}. #{beach.name}"
      end
      puts "\nWanna 'get wet'?\nEnter a digit, dude.\nOr 'later' to bail.\n\n"
